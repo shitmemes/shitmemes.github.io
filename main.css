@@ -1,0 +1,107 @@
+small { font-size: 13px; }
+    tiny { font-size: 9px; }
+    .code {
+  background-color:#444444;
+  color:#ffffff;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+}
+/*
+    ex-h7 {
+	    background:linear-gradient(to bottom, #c300ff, #e4c7ed); 
+	    border-radius:25px; 
+	    padding:10px; 
+	    border: 10px; 
+	    border-color: #e1c7f0;
+    }
+*/
+.ohio {
+    width: 100%;
+}
+
+.ohio video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    /* make these lines kts if not needed */
+    background-color: #787878;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 11px;
+}
+    body {
+      font-family: arial; 
+      background-color: #300030;
+      color: #ffffff;
+      text-align: center;
+    }
+    a {
+      color: #ff00ff;
+    }
+    a:visited {
+      color: #440044;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #500050;
+      border-radius: 11px;
+    }
+    .sections {
+      display: flex;
+      width: 80%;
+      justify-content: space-between;
+      margin-bottom: 20px; 
+    }
+	.sectionLeft {
+		 width: 60%; 
+	}
+	.sectionRight {
+		 width: 36%; 
+	}
+    .sectionLeft, .sectionRight {
+      background-color: #5f2096;
+      border-radius: 11px;
+      padding: 10px; 
+    }
+    .sectionTop {
+      width: 80%;
+      background-color: #5f2096;
+      border-radius: 11px;
+      color: #FFFFFF;
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+    a:hover {
+      transition: all .2s ease-in-out;
+      font-size: 130%;
+      color: #780078;
+    }
+        button {
+            border-radius: 25px;
+  background-color: #cc77cc;
+  padding: 8px;
+		color: #ffffff;
+		display: flex;
+            background-color: linear-gradient(to right, #ee99ee, #cc66cc);
+        }
+
+
+/* mobile users i guess */
+@media screen and (max-width: 600px) {
+  .sections {
+    flex-direction: column;
+    width: 100%; 
+    padding: 0;
+  }
+  .sectionLeft, .sectionRight {
+    width: 90%;
+    border-radius: 11px;
+    padding: 10px; 
+    margin: auto;
+  }
+  .ohio video {
+        aspect-ratio: 9 / 16;
+    } 
+}
