@@ -1,10 +1,13 @@
 
 
-function balls(vid, title, id, info, offensive, epileptic) {
+function balls(vid, title, id, info, offensive, epileptic, submemes) {
 
     // default value for info
     if (info === null || info === undefined) {
         info = "Info isn't available.";
+    };
+    if (submemes === null || submemes === undefined) {
+        submemes = "This meme has no submemes.";
     };
 
 var htmlContent = "<!DOCTYPE html>"+
@@ -27,7 +30,7 @@ var htmlContent = "<!DOCTYPE html>"+
 
 if (id % 1 != 0) {
 	if (id < 0) {
-	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) - 1 + "'>Main meme</a>";
+	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + 1 + "'>Main meme</a>";
 	} else {
 	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + "'>Main meme</a>";
 	};
@@ -69,11 +72,7 @@ htmlContent += "</center>" +
 
     // section right
     "<div class='sectionRight'>" +
-    "<marquee scrollspeed='8'>Other pages!</marquee>" +
-    "<a href='../../../pages/changelog/'>Changelog</a><br>" +
-    "<a href='../../../pages/servers/'>Server list</a><br>" +
-    "<a href='../../../pages/shitpost/'>Shitpost Generator</a><br>" +
-    "<a href='../../../'>Main page</a>" +
+    submemes +
     "</div>" +
     "</div>" +
     "</div>" +
