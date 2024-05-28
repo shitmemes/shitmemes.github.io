@@ -30,7 +30,7 @@ var htmlContent = "<!DOCTYPE html>"+
 
 if (id % 1 != 0) {
 	if (id < 0) {
-	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + 1 + "'>Main meme</a>";
+	htmlContent += "<a href='https://shitmemes.github.io/memes/" + (Math.floor(id) + 1) + "'>Main meme</a>";
 	} else {
 	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + "'>Main meme</a>";
 	};
