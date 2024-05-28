@@ -26,7 +26,12 @@ var htmlContent = "<!DOCTYPE html>"+
     "(" + id + ") Shitpost Centre - " + title + "<br>";
 
 if (id % 1 != 0) {
-	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + "'>Main meme</a> --- <a href ='https://shitmemes.github.io'>Reroll</a>";
+	if (id < 0) {
+	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) - 1 + "'>Main meme</a>";
+	} else {
+	htmlContent += "<a href='https://shitmemes.github.io/memes/" + Math.floor(id) + "'>Main meme</a>";
+	};
+	htmlContent += "--- <a href ='https://shitmemes.github.io'>Reroll</a>";
 } else if (id < 0) {
     htmlContent += "<a href='https://shitmemes.github.io/memes/" + (id + 1) + "'>Previous</a> --- <a href='https://shitmemes.github.io'>Reroll</a> --- <a href='https://shitmemes.github.io/memes/" + (id - 1) + "'>Next</a>";
 } else {
