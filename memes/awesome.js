@@ -72,7 +72,7 @@ htmlContent += "</center>" +
 
     // section right
     "<div class='sectionRight'>" +
-    "<a href='https://shitmemes.github.io'>Main page</a>" + "<br> +
+    "<a href='https://shitmemes.github.io'>Main page</a>" + "<br>" +
     submemes +
     "</div>" +
     "</div>" +
