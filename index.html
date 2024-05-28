@@ -3,7 +3,7 @@
     <title>27791's Shitposting Centre</title>
     <meta content="shitmemes" property="og:title">
     <meta content="the shittiest memes in existence." property="og:description">
-    <link rel="stylesheet" href="https://purplsoosh.github.io/resources/main.css">
+    <link rel="stylesheet" href="https://shitmemes.github.io/main.css">
     <style>
         #idInput {
             width: 100px; 
@@ -29,9 +29,9 @@
       <div class="sectionLeft">
         <span id="splash">PLEASE PLEASE ENABLE JS PLEASE PLEASE</span><br>
 	<span id="imgs">0</span> images, <span id="vids">0</span> videos<br>
-        <button type="button" onclick="whar(1);">Images only!</button><br>
-        <button type="button" onclick="whar(2);">Videos only!</button><br>
-        <button type="button" onclick="whar(3);">idc i just want memes</button><br>
+        <button type="button" onclick="whar(1);">Images only!</button>
+        <button type="button" onclick="whar(2);">Videos only!</button>
+        <button type="button" onclick="whar(3);">idc i just want memes</button>
         <label for="idInput" id="something">Type in ID:</label>
         <input type="text" id="idInput">
         <button type="button" onclick="whar(4);">Submit</button><br>
@@ -93,6 +93,8 @@ window.onload = function() {
     .then(data => {
       imgs = data.imgs;
       vids = data.vids;
+      gifs = data.gifs;
+      copypastas = data.copypastas;
       offensive = data.offensive;
       epileptic = data.epileptic;
       splashes = data.splashes;
