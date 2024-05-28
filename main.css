@@ -9,7 +9,7 @@ small { font-size: 13px; }
     ex-h7 {
 	    background:linear-gradient(to bottom, #c300ff, #e4c7ed); 
 	    border-radius:25px; 
-	    padding:10px; 
+	    padding:10px 20px; 
 	    border: 10px; 
 	    border-color: #e1c7f0;
     }
@@ -78,14 +78,20 @@ small { font-size: 13px; }
       font-size: 130%;
       color: #780078;
     }
-        button {
-            border-radius: 25px;
-  background-color: #cc77cc;
-  padding: 8px;
-		color: #ffffff;
-		display: flex;
-            background-color: linear-gradient(to right, #ee99ee, #cc66cc);
-        }
+button {
+    border-radius: 25px;
+    background-color: #300030;
+    color: #ffffff;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background-color: #700070;
+}
 
 
 /* mobile users i guess */
