@@ -16,7 +16,7 @@ var htmlContent = "<!DOCTYPE html>"+
     "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
-    "<link rel='stylesheet' href='https://purplsoosh.github.io/resources/main.css'>" +
+    "<link rel='stylesheet' href='https://shitmemes.github.io/main.css'>" +
     "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
     if (id <= 0) {
     htmlContent += "<meta property='og:video' content='" + vid + "'>" +
@@ -72,6 +72,7 @@ htmlContent += "</center>" +
 
     // section right
     "<div class='sectionRight'>" +
+    "<a href='https://shitmemes.github.io'>Main page</a>" + "<br> +
     submemes +
     "</div>" +
     "</div>" +
