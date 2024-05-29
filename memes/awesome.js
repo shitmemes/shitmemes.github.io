@@ -18,18 +18,18 @@ window.onload = function() {
       return response.json();
     })
     .then(data => {
-          for (let i = 0; i < meme.length; i++) {
+          for (let i = 0; i < data.length; i++) {
 	 let id2 = parseInt(window.location.href.match(/\/(\d{2})$/)[1]);
       if (id2 === data[i].id) {
-        var id = data[i][0];
-        var title = data[i][1];
-        var directory = data[i][2];
-        var note = data[i][3];
-        var src = data[i][4];
-        var submemes = data[i][5];
-        var epileptic = data[i][6];
-        var offensive = data[i][7];
-        var mainMeme = data[i][8];
+                        var id = data[i].id;
+                        var title = data[i].title;
+                        var directory = data[i].directory;
+                        var note = data[i].note;
+                        var src = data[i].src;
+                        var submemes = data[i].submemes;
+                        var epileptic = data[i].epileptic;
+                        var offensive = data[i].offensive;
+                        var mainMeme = data[i].mainMeme;
         break;
       };
     };
