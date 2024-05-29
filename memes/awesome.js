@@ -103,7 +103,7 @@ htmlContent += "</center>" +
 		};
 	  if (submemes) {
 		htmlContent += "<h3>Submemes</h3><br>";
-			for (let i4 = 0; i < submemes.length; i4++;) {
+			for (let i4 = 0; i < submemes.length; i4++) {
 				htmlContent += "<a href='https://shitmemes.github.io/memes/" + submemes[i4].id + ">Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>"
 			};
 		};
