@@ -1,7 +1,8 @@
 
-window.onload = function() {
-	var meme = 6;
-		  function chocolate() {
+function wonderhoy(id2) {
+	// not sure if i need id2?
+meme = chocolate();
+			  function chocolate() {
   fetch('https://shitmemes.github.io/memes.json')
     .then(response => {
       if (!response.ok) {
@@ -16,11 +17,6 @@ window.onload = function() {
       console.error('fetch skill issue:', error);
     });
 	};
-};
-
-function wonderhoy(id2) {
-	// not sure if i need id2?
-meme = chocolate();
 var found = false;
 for (let i = 0; i < meme.length; i++) {
  if (id2 === meme[i].id) {
