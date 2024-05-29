@@ -96,7 +96,6 @@ htmlContent += "</center>" +
         htmlContent += '<img width="640" height="640" src="' + vid + '" alt=' + title + '>'
     }
     htmlContent += "</div></center>" +
-    "<small>" + info + "</small>" +
     "</div>" +
 
     // section right
