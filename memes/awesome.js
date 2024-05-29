@@ -25,15 +25,15 @@ window.onload = function() {
 }
           for (let i = 0; i < data.length; i++) {
       if (id2 === data[i].id) {
-                        var id = data[i].id;
-                        var title = data[i].title;
-                        var directory = data[i].directory;
-                        var note = data[i].note;
-                        var src = data[i].src;
-                        var submemes = data[i].submemes;
-                        var epileptic = data[i].epileptic;
-                        var offensive = data[i].offensive;
-                        var mainMeme = data[i].mainMeme;
+                         id = data[i].id;
+                         title = data[i].title;
+                         directory = data[i].directory;
+                         note = data[i].note;
+                         src = data[i].src;
+                         submemes = data[i].submemes;
+                         epileptic = data[i].epileptic;
+                         offensive = data[i].offensive;
+                         mainMeme = data[i].mainMeme;
         break;
       };
     };
@@ -46,6 +46,8 @@ window.onload = function() {
 };
 
 function wonderhoy(id2) {
+setTimeout(function() {
+    console.log("Hello", parameter1, parameter2);
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
@@ -208,4 +210,5 @@ htmlContent += "</center>" +
     "</html>";
 
 document.write(htmlContent);
+	}, 100);
 }
