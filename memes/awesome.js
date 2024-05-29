@@ -17,6 +17,12 @@ fetch('https://shitmemes.github.io/memes.json')
         var epileptic;
         var offensive;
         var mainMeme;
+	      if (info === null || info === undefined) {
+        info = "Info isn't available.";
+    };
+    if (submemes === null || submemes === undefined) {
+        submemes = "This meme has no submemes.";
+    };
                    if (window.location.href.slice(-3, -1) == 'tm') {
                      id2 = parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
                 } else {
