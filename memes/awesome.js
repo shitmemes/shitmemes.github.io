@@ -1,40 +1,46 @@
-var meme = 6;
-function wonderhoy(id2) {
+        var id;
+        var title;
+        var directory;
+	var note;
+        var src;
+        var submemes;
+        var epileptic;
+        var offensive;
+        var mainMeme;
+
 function chocolate() {
-    return fetch('https://shitmemes.github.io/memes.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network skill issue');
-            }
-            return response.json();
-        })
-        .catch(error => {
-            console.error('fetch skill issue:', error);
-        });
-};
-	
-meme = chocolate();
-console.log(meme);
-var found = false;
-for (let i = 0; i < meme.length; i++) {
- if (id2 === meme[i].id) {
-    found = true; 
-	var id = meme[i].id;
-	var title = meme[i].title;
-	var directory = meme[i].directory;
-	var note = meme[i].note;
-	var src = meme[i].src;
-	var submemes = meme[i].submemes;
-	var epileptic = meme[i].epileptic;
-  var offensive = meme[i].offensive;
-	var mainMeme = meme[i].mainMeme;
-	 
-	 break
- }
-};
-if (found) {
-	console.log("I FOUND IT!!!!");
-    var htmlContent = "<html>" +
+  return fetch('https://shitmemes.github.io/memes.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network skill issue');
+      }
+      return response.json();
+    })
+    .then(data => {return data;})
+    .catch(error => {throw new Error('fetch skill issue:', error);})
+}
+
+function wonderhoy(id2) {
+  return chocolate().then(meme => {
+    console.log(meme);
+    var found = false;
+    for (let i = 0; i < meme.length; i++) {
+      if (id2 === meme[i].id) {
+        found = true; 
+        var id = meme[i].id;
+        var title = meme[i].title;
+        var directory = meme[i].directory;
+        var note = meme[i].note;
+        var src = meme[i].src;
+        var submemes = meme[i].submemes;
+        var epileptic = meme[i].epileptic;
+        var offensive = meme[i].offensive;
+        var mainMeme = meme[i].mainMeme;
+        break;
+      }
+    };
+    if (found) {
+var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
     "<link rel='stylesheet' href='https://shitmemes.github.io/main.css'>" +
@@ -111,12 +117,11 @@ htmlContent += "</center>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-} else {
-	throw new Error("nothing is worth the risk");
 }
-};
-
-
+    };
+}
+  });
+}
 // ARCHIVED
 
 function balls(vid, title, id, info, offensive, epileptic, submemes) {
