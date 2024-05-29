@@ -35,6 +35,7 @@ window.onload = function() {
                         offensive = data[i].offensive;
                         mainMeme = data[i].mainMeme;
                         break;
+			wonderhoy(id2)
                     }
                 }
             })
