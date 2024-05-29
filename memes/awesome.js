@@ -102,12 +102,12 @@ htmlContent += "</center>" +
 		note + "<br>" +
     "<a href='https://shitmemes.github.io'>Main page</a>" + "<br>";
     if (mainMeme) {
-		htmlContent += "<a href='https://shitmemes.github.io/memes/" + mainMeme + ">Main meme</a><br>";
+		htmlContent += "<a href='https://shitmemes.github.io/memes/" + mainMeme + "'>Main meme</a><br>";
 		};
 	  if (submemes) {
 		htmlContent += "<h3>Submemes</h3><br>";
 			for (let i4 = 0; i4 < submemes.length; i4++) {
-				htmlContent += "<a href='https://shitmemes.github.io/memes/" + submemes[i4].id + ">Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>"
+				htmlContent += "<a href='https://shitmemes.github.io/memes/" + submemes[i4].id + "'>Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>"
 			};
 		};
     htmlContent += "</div>" +
