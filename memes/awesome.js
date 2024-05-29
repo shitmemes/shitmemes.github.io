@@ -1,4 +1,6 @@
-	window.onload = function() {
+
+window.onload = function() {
+	var meme = 6;
 		  function chocolate() {
   fetch('https://shitmemes.github.io/memes.json')
     .then(response => {
