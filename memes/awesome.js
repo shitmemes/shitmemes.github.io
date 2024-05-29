@@ -119,9 +119,7 @@ htmlContent += "</center>" +
 	document.write(htmlContent);
 }
     };
-}
-  });
-}
+};
 // ARCHIVED
 
 function balls(vid, title, id, info, offensive, epileptic, submemes) {
