@@ -10,7 +10,7 @@
 
 window.onload = function() {
     function chocolate() {
-        fetch('https://shitmemes.github.io/data.json')
+        fetch('https://shitmemes.github.io/memes.json')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network skill issue');
