@@ -1,2 +1,2 @@
-# Add a README
-Help people interested in this repository understand your project by adding a README.
+# welcome to the SHITTIEST memes ever in existence.
+acc owned by PurplSoosh (he's very cool go sub on YT)
