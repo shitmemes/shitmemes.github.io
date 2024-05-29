@@ -23,21 +23,20 @@ window.onload = function() {
                 } else {
                     var id2 = parseInt(window.location.href.slice(0, -1).match(/-?\d+$/)?.[0], 10);
                 }
-                for (let i = 0; i < data.length; i++) {
-                    if (id2 === data[i].id) {
-                        id = data[i].id;
-                        title = data[i].title;
-                        directory = data[i].directory;
-                        note = data[i].note;
-                        src = data[i].src;
-                        submemes = data[i].submemes;
-                        epileptic = data[i].epileptic;
-                        offensive = data[i].offensive;
-                        mainMeme = data[i].mainMeme;
-                        break;
-			wonderhoy(id2, id, title, directory, note, src, submemes, epileptic, offensive, mainMeme)
-                    }
-                }
+		for (let i = 0; i < memes.length; i++) {
+ 		   if (id2 === memes[i].id) {
+    		       id = memes[i].id;
+    		       title = memes[i].title;
+    		       directory = memes[i].directory;
+    		       note = memes[i].note;
+   		       src = memes[i].src;
+  		       submemes = memes[i].submemes;
+ 		       epileptic = memes[i].epileptic;
+ 		       offensive = memes[i].offensive;
+ 		       mainMeme = memes[i].mainMeme;
+ 		       wonderhoy(id2, id, title, directory, note, src, submemes, epileptic, offensive, mainMeme);
+		    }
+		}
             })
             .catch(error => {
                 console.error('fetch skill issue:', error);
