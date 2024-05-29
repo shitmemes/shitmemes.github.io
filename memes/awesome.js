@@ -47,7 +47,6 @@ window.onload = function() {
 
 function wonderhoy(id2) {
 setTimeout(function() {
-    console.log("Hello", parameter1, parameter2);
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
