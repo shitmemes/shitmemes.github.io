@@ -9,44 +9,43 @@
         var mainMeme;
 
 window.onload = function() {
-	function chocolate() {
-  fetch('https://shitmemes.github.io/data.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network skill issue');
-      }
-      return response.json();
-    })
-    .then(data => {
-	    if (window.location.href.slice(-3, -1) == 'tm') {
-    var id2 = parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
-} else {
-    var id2 = parseInt(window.location.href.slice(0, -1).match(/-?\d+$/)?.[0], 10);
-}
-          for (let i = 0; i < data.length; i++) {
-      if (id2 === data[i].id) {
-                         id = data[i].id;
-                         title = data[i].title;
-                         directory = data[i].directory;
-                         note = data[i].note;
-                         src = data[i].src;
-                         submemes = data[i].submemes;
-                         epileptic = data[i].epileptic;
-                         offensive = data[i].offensive;
-                         mainMeme = data[i].mainMeme;
-        break;
-      };
-    };
-    })
-    .catch(error => {
-      console.error('fetch skill issue:', error);
-    });
-	};
-	chocolate();
+    function chocolate() {
+        fetch('https://shitmemes.github.io/data.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network skill issue');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (window.location.href.slice(-3, -1) == 'tm') {
+                    var id2 = parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
+                } else {
+                    var id2 = parseInt(window.location.href.slice(0, -1).match(/-?\d+$/)?.[0], 10);
+                }
+                for (let i = 0; i < data.length; i++) {
+                    if (id2 === data[i].id) {
+                        id = data[i].id;
+                        title = data[i].title;
+                        directory = data[i].directory;
+                        note = data[i].note;
+                        src = data[i].src;
+                        submemes = data[i].submemes;
+                        epileptic = data[i].epileptic;
+                        offensive = data[i].offensive;
+                        mainMeme = data[i].mainMeme;
+                        break;
+                    }
+                }
+            })
+            .catch(error => {
+                console.error('fetch skill issue:', error);
+            });
+    }
+    chocolate();
 };
 
 function wonderhoy(id2) {
-setTimeout(function() {
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
@@ -123,7 +122,6 @@ htmlContent += "</center>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-	}; 100);
 };
 // ARCHIVED
 
