@@ -8,7 +8,7 @@
       return response.json();
     })
     .then(data => {
-      var memeData = data;
+      var meme = data;
     })
     .catch(error => {
       console.error('fetch skill issue:', error);
