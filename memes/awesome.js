@@ -18,8 +18,12 @@ window.onload = function() {
       return response.json();
     })
     .then(data => {
+	    if (window.location.href.slice(-3, -1) == 'tm') {
+    let id2 = window.location.href.slice(-13, -11)
+} else {
+    let id2 = window.location.href.slice(-3, -1)
+}
           for (let i = 0; i < data.length; i++) {
-	 let id2 = parseInt(window.location.href.match(/\/(\d{2})$/)[1]);
       if (id2 === data[i].id) {
                         var id = data[i].id;
                         var title = data[i].title;
