@@ -25,7 +25,7 @@ fetch('https://shitmemes.github.io/memes.json')
   
   		for (let i = 0; i < memes.length; i++) {
  		   if (id2 === memes[i].id) {
-    		       id2 = memes[i].id;
+    		       id = memes[i].id;
     		       title = memes[i].title;
     		       directory = memes[i].directory;
     		       note = memes[i].note;
