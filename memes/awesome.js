@@ -150,6 +150,7 @@ var htmlContent = "<!DOCTYPE html>"+
     "<meta property=''content='video.movie'>" };
     htmlContent += "</head>" +
     "<body>" +
+    info + "<br>" + vid +
     "<div class='container'>" +
     "<div class='sectionTop'>" +
     "<center>" +
