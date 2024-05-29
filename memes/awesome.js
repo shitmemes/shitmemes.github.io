@@ -18,20 +18,20 @@ window.onload = function() {
       return response.json();
     })
     .then(data => {
-	    var meme = data;
           for (let i = 0; i < meme.length; i++) {
-      if (id2 === meme[i].id) {
-        var id = meme[i].id;
-        var title = meme[i].title;
-        var directory = meme[i].directory;
-        var note = meme[i].note;
-        var src = meme[i].src;
-        var submemes = meme[i].submemes;
-        var epileptic = meme[i].epileptic;
-        var offensive = meme[i].offensive;
-        var mainMeme = meme[i].mainMeme;
+	 let id2 = parseInt(window.location.href.match(/\/(\d{2})$/)[1]);
+      if (id2 === data[i].id) {
+        var id = data[i][0];
+        var title = data[i][1];
+        var directory = data[i][2];
+        var note = data[i][3];
+        var src = data[i][4];
+        var submemes = data[i][5];
+        var epileptic = data[i][6];
+        var offensive = data[i][7];
+        var mainMeme = data[i][8];
         break;
-      }
+      };
     };
     })
     .catch(error => {
