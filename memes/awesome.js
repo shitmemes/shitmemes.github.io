@@ -19,9 +19,9 @@ window.onload = function() {
     })
     .then(data => {
 	    if (window.location.href.slice(-3, -1) == 'tm') {
-    parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
+    var id2 = parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
 } else {
-    parseInt(window.location.href.slice(0, -1).match(/-?\d+$/)?.[0], 10);
+    var id2 = parseInt(window.location.href.slice(0, -1).match(/-?\d+$/)?.[0], 10);
 }
           for (let i = 0; i < data.length; i++) {
       if (id2 === data[i].id) {
