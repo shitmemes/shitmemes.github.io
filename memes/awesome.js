@@ -8,13 +8,13 @@
       return response.json();
     })
     .then(data => {
-      var meme = data;
+      return data;
     })
     .catch(error => {
       console.error('fetch skill issue:', error);
     });
 	};
-	chocolate();
+	meme = chocolate();
 };
 
 function wonderhoy(id2) {
