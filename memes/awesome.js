@@ -8,23 +8,18 @@
         var offensive;
         var mainMeme;
 
-function chocolate() {
-  return fetch('https://shitmemes.github.io/memes.json')
+window.onload = function() {
+	function chocolate() {
+  fetch('https://shitmemes.github.io/data.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network skill issue');
       }
       return response.json();
     })
-    .then(data => {return data;})
-    .catch(error => {throw new Error('fetch skill issue:', error);})
-}
-
-function wonderhoy(id2) {
-  return chocolate().then(meme => {
-    console.log(meme);
-    var found = false;
-    for (let i = 0; i < meme.length; i++) {
+    .then(data => {
+	    var meme = data;
+          for (let i = 0; i < meme.length; i++) {
       if (id2 === meme[i].id) {
         found = true; 
         var id = meme[i].id;
@@ -39,7 +34,17 @@ function wonderhoy(id2) {
         break;
       }
     };
-    if (found) {
+    })
+    .catch(error => {
+      console.error('fetch skill issue:', error);
+    });
+	};
+	chocolate();
+};
+
+function wonderhoy(id2) {
+  return chocolate().then(meme => {
+    console.log(meme);
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
@@ -117,9 +122,7 @@ htmlContent += "</center>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-}
-    }
-			  )};
+)};
 // ARCHIVED
 
 function balls(vid, title, id, info, offensive, epileptic, submemes) {
