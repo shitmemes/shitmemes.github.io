@@ -1,7 +1,5 @@
-
+var meme = 6;
 function wonderhoy(id2) {
-	// not sure if i need id2?
-	var meme = 6;
 function chocolate() {
     return fetch('https://shitmemes.github.io/memes.json')
         .then(response => {
@@ -16,6 +14,7 @@ function chocolate() {
 };
 	
 meme = chocolate();
+console.log(meme);
 var found = false;
 for (let i = 0; i < meme.length; i++) {
  if (id2 === meme[i].id) {
@@ -32,7 +31,7 @@ for (let i = 0; i < meme.length; i++) {
 	 
 	 break
  }
-} 
+};
 if (found) {
 	console.log("I FOUND IT!!!!");
     var htmlContent = "<html>" +
