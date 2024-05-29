@@ -17,8 +17,8 @@ fetch('https://shitmemes.github.io/memes.json')
         var epileptic;
         var offensive;
         var mainMeme;
-	      if (info === null || info === undefined) {
-        info = "Info isn't available.";
+	      if (note === null || note === undefined) {
+        note = "Info isn't available.";
     };
     if (submemes === null || submemes === undefined) {
         submemes = "This meme has no submemes.";
