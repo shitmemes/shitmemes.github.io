@@ -35,7 +35,7 @@ window.onload = function() {
                         offensive = data[i].offensive;
                         mainMeme = data[i].mainMeme;
                         break;
-			wonderhoy(id2)
+			wonderhoy(id2, id, title, directory, note, src, submemes, epileptic, offensive, mainMeme)
                     }
                 }
             })
@@ -46,7 +46,7 @@ window.onload = function() {
     chocolate();
 };
 
-function wonderhoy(id2) {
+function wonderhoy(id2, id, title, directory, note, src, submemes, epileptic, offensive, mainMeme) {
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
