@@ -124,7 +124,7 @@ htmlContent += "</center>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-	}; 100)
+	}; 100);
 };
 // ARCHIVED
 
@@ -211,5 +211,4 @@ htmlContent += "</center>" +
     "</html>";
 
 document.write(htmlContent);
-	}, 100);
 }
