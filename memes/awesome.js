@@ -2,21 +2,18 @@
 function wonderhoy(id2) {
 	// not sure if i need id2?
 	var meme = 6;
-			  function chocolate() {
-  fetch('https://shitmemes.github.io/memes.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network skill issue');
-      }
-      return response.json();
-    })
-    .then(data => {
-      return data;
-    })
-    .catch(error => {
-      console.error('fetch skill issue:', error);
-    });
-	};
+function chocolate() {
+    return fetch('https://shitmemes.github.io/memes.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network skill issue');
+            }
+            return response.json();
+        })
+        .catch(error => {
+            console.error('fetch skill issue:', error);
+        });
+};
 	
 meme = chocolate();
 var found = false;
@@ -32,12 +29,13 @@ for (let i = 0; i < meme.length; i++) {
 	var epileptic = meme[i].epileptic;
   var offensive = meme[i].offensive;
 	var mainMeme = meme[i].mainMeme;
+	 
 	 break
  }
 } 
 if (found) {
 	console.log("I FOUND IT!!!!");
-    "<html>" +
+    var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
     "<link rel='stylesheet' href='https://shitmemes.github.io/main.css'>" +
@@ -103,7 +101,7 @@ htmlContent += "</center>" +
 		};
 	  if (submemes) {
 		htmlContent += "<h3>Submemes</h3><br>";
-			for (let i4 = 0; i < submemes.length; i4++) {
+			for (let i4 = 0; i4 < submemes.length; i4++) {
 				htmlContent += "<a href='https://shitmemes.github.io/memes/" + submemes[i4].id + ">Submeme " + (i4 + 1) + ": " + submemes[i4].title + "</a><br>"
 			};
 		};
@@ -118,6 +116,9 @@ htmlContent += "</center>" +
 	throw new Error("nothing is worth the risk");
 }
 };
+
+
+// ARCHIVED
 
 function balls(vid, title, id, info, offensive, epileptic, submemes) {
 
