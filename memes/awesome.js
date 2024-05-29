@@ -21,7 +21,6 @@ window.onload = function() {
 	    var meme = data;
           for (let i = 0; i < meme.length; i++) {
       if (id2 === meme[i].id) {
-        found = true; 
         var id = meme[i].id;
         var title = meme[i].title;
         var directory = meme[i].directory;
@@ -43,8 +42,6 @@ window.onload = function() {
 };
 
 function wonderhoy(id2) {
-  return chocolate().then(meme => {
-    console.log(meme);
 var htmlContent = "<html>" +
     "<head>" +
     "<title>ID " + id + ": " + title + "</title>" +
@@ -122,7 +119,7 @@ htmlContent += "</center>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-  })};
+};
 // ARCHIVED
 
 function balls(vid, title, id, info, offensive, epileptic, submemes) {
