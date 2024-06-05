@@ -1,5 +1,27 @@
 [
   {
+    "id": 7,
+    "title": "wtf?? chatgpt??",
+    "directory": "the last 7 digits of pi.png",
+    "note": "I captured this, but I stole it from a reddit post",
+    "src": null,
+    "epileptic": false,
+    "offensive": false,
+    "isSubmeme": false,
+    "mainMeme": null
+  },
+  {
+    "id": 8,
+    "title": "One must kill thyself",
+    "directory": "kys_uzi.jpg",
+    "note": null,
+    "src": null,
+    "epileptic": false,
+    "offensive": false,
+    "isSubmeme": false,
+    "mainMeme": null
+  },
+  {
     "id": -1,
     "title": "Baldi Gangnam Styling",
     "directory": "baldi gangnam style.mp4",
