@@ -1989,7 +1989,20 @@
   "isSubmeme": false,
   "mainMeme": null
 },
-                              {
+{                              {
+    "id": -176,
+    "title": "Why you should STFU",
+    "directory": "why_you_should_stfu.mp4",
+    "note": "Get out you stupid troll",
+    "src": null,
+    "submemes": [],
+    "epileptic": false,
+    "offensive": false,
+    "isSubmeme": false,
+    "mainMeme": null
+  }
+
+      {                              
     "id": null,
     "title": "This meme has been proven not to exist.",
     "directory": "what the sigma.mp4",
