@@ -26,7 +26,7 @@
   <div class="container">
     <div class="sectionTop">
       <center>
-        shitmemes.github.io // <span id="splash">PLEASE PLEASE ENABLE JS PLEASE PLEASE</span><br>
+        shitmemesclone.github.io // <span id="splash">PLEASE PLEASE ENABLE JS PLEASE PLEASE</span><br>
 	creator: 27791<br>
       </center>
     </div>
@@ -59,7 +59,7 @@
     if (mode == 4) {
         var id = parseInt(document.getElementById('idInput').value);
         if (id && id >= -vids && id <= imgs || id == 0) {
-            window.location.href = "https://shitmemes.github.io/memes/" + id;
+            window.location.href = "https://oragerbox.github.io/shitmemesclone.github.io/memes/" + id;
         } else {
             console.warn('Invalid ID: ' + id + ' (IDs ' + imgs + ' to ' + vids * -1 + ' are the only IDs allowed!)');
             document.getElementById("idInput").value = "";
@@ -67,7 +67,7 @@
             setTimeout(function() {document.getElementById("something").innerHTML = "Type in ID:";}, 2000)
         }
     } else {
-        window.location.href = "https://shitmemes.github.io/memes/" + rand(mode);
+        window.location.href = "https://oragerbox.github.io/shitmemesclone.github.io/memes/" + rand(mode);
     }
   };
 
@@ -88,7 +88,7 @@
 
 window.onload = function() {
 	function chocolate() {
-  fetch('https://shitmemes.github.io/data.json')
+  fetch('https://oragerbox.github.io/shitmemesclone.github.io/data.json')
     .then(response => {
       if (!response.ok) {
         throw new Error('Network skill issue');
