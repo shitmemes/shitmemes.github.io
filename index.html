@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head>
+    <title>27791's Shitposting Centre</title>
+    <meta content="shitmemes" property="og:title">
+    <meta content="the shittiest memes in existence." property="og:description">
+    <meta name="google-site-verification" content="d8julPiB4Pf7TRLdhWS1sxgY-4-d61RNc79iiOi4X8M" />
+    <link rel="stylesheet" href="https://shitmemes.github.io/main.css">
+    <style>
+#idInput {
+    border-radius: 25px;
+    background-color: #300030;
+    color: #ffffff;
+    padding: 5px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+#idInput:hover {
+    background-color: #600060;
+}
+    </style>
+</head><body>
+<center>
+  <div class="container">
+    <div class="sectionTop">
+      <center>
+        shitmemesclone.github.io // <span id="splash">PLEASE PLEASE ENABLE JS PLEASE PLEASE</span><br>
+	creator: 27791<br>
+      </center>
+    </div>
+    
+    <div class="sections">
+      <div class="sectionLeft">
+	<span id="imgs">0</span> images, <span id="vids">0</span> videos<br>
+        <button type="button" onclick="whar(1);">Images</button>
+        <button type="button" onclick="whar(2);">Videos</button>
+        <button type="button" onclick="whar(3);">whatever man 😭</button><br>
+        <label for="idInput" id="something">Type in ID:</label>
+        <input type="text" id="idInput">
+        <button type="button" onclick="whar(4);">Submit</button><br>
+      </div>
+      <div class="sectionRight">
+        <a href="https://purplsoosh.github.io">Main website</a><br>
+        meme galore.<br>
+      </div>
+    </div>
+  </div>
+</center>
+<script>
+  var imgs;
+  var vids;
+  var offensive;
+  var epileptic;
+  var splashes;
+
+  function whar(mode) {
+    if (mode == 4) {
+        var id = parseInt(document.getElementById('idInput').value);
+        if (id && id >= -vids && id <= imgs || id == 0) {
+            window.location.href = "https://oragerbox.github.io/shitmemesclone.github.io/memes/" + id;
+        } else {
+            console.warn('Invalid ID: ' + id + ' (IDs ' + imgs + ' to ' + vids * -1 + ' are the only IDs allowed!)');
+            document.getElementById("idInput").value = "";
+            document.getElementById("something").innerHTML = "Invalid ID!";
+            setTimeout(function() {document.getElementById("something").innerHTML = "Type in ID:";}, 2000)
+        }
+    } else {
+        window.location.href = "https://oragerbox.github.io/shitmemesclone.github.io/memes/" + rand(mode);
+    }
+  };
+
+  function rand(mode) {
+    if (mode == 1) {
+        return Math.floor(Math.random() * imgs) + 1;
+    } else if (mode == 2) {
+        return -1 * (Math.floor(Math.random() * vids) + 1);
+    } else if (mode == 3) {
+        const isVideo = Math.random() < 0.5;
+        if (isVideo) {
+            return -1 * (Math.floor(Math.random() * vids) + 1);
+        } else {
+            return Math.floor(Math.random() * imgs) + 1;
+        }
+    }
+  };
+
+window.onload = function() {
+	function chocolate() {
+  fetch('https://oragerbox.github.io/shitmemesclone.github.io/data.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network skill issue');
+      }
+      return response.json();
+    })
+    .then(data => {
+      imgs = data.imgs;
+      vids = data.vids;
+      gifs = data.gifs;
+      copypastas = data.copypastas;
+      offensive = data.offensive;
+      epileptic = data.epileptic;
+      splashes = data.splashes;
+      document.getElementById("splash").innerHTML = splashes[Math.floor(Math.random() * splashes.length)];
+      document.getElementById("imgs").innerHTML = imgs;
+      document.getElementById("vids").innerHTML = vids;
+    })
+    .catch(error => {
+      console.error('fetch skill issue:', error);
+    });
+	};
+	chocolate();
+};
+</script></body>
+</html>
