@@ -97,7 +97,7 @@ htmlContent += "<div class='sections'>" +
     } else {
         htmlContent += '<img width="640" height="640" src="' + directory + '" alt=' + title + '>';
     }
-    htmlContent += "</div></center></div>";
+    htmlContent += "</div></center></div>" +
     // section right
     "<div class='sectionRight'>" +
 		note + "<br>" +
