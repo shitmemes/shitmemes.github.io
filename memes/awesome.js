@@ -17,6 +17,7 @@ fetch('https://shitmemes.github.io/memes.json')
         var epileptic;
         var offensive;
         var mainMeme;
+	var memeFound;
                    if (window.location.href.slice(-3, -1) == 'tm') {
                      id2 = parseInt(window.location.href.slice(0, -11).match(/-?\d+$/)?.[0], 10);
                 } else {
@@ -34,6 +35,7 @@ fetch('https://shitmemes.github.io/memes.json')
  		       epileptic = memes[i].epileptic;
  		       offensive = memes[i].offensive;
  		       mainMeme = memes[i].mainMeme;
+		       memeFound = 1;
 		    }
 		}
   	      if (note === null || note === undefined) {
@@ -49,14 +51,14 @@ fetch('https://shitmemes.github.io/memes.json')
     "<meta name='viewport' content='width=device-width, initial-scale=1.0'>";
     if (id <= 0) {
     htmlContent += "<meta property='og:video' content='" + directory + "'>" +
-    "<meta property=''content='video.movie'>"; }
+    "<meta property=''content='video.movie'>";
+    }
     htmlContent += "</head>" +
     "<body>" +
     "<div class='container'>" +
     "<div class='sectionTop'>" +
-    "<center>" +
-    "(" + id + ") Shitpost Center - " + title + "<br>";
-
+    "<center>"
+    if (memeFound === 1) { htmlContent += "(" + id + ") Shitpost Center - " + title + "<br>"; 
 if (id % 1 != 0) {
 	if (id < 0) {
 	htmlContent += "<a href='https://shitmemes.github.io/memes/" + (Math.floor(id) + 1) + "'>Main meme</a>";
@@ -68,8 +70,7 @@ if (id % 1 != 0) {
     htmlContent += "<a href='https://shitmemes.github.io/memes/" + (id + 1) + "'>Previous</a> --- <a href='https://shitmemes.github.io'>Reroll</a> --- <a href='https://shitmemes.github.io/memes/" + (id - 1) + "'>Next</a>";
 } else {
     htmlContent += "<a href='https://shitmemes.github.io/memes/" + (id - 1) + "'>Previous</a> --- <a href='https://shitmemes.github.io'>Reroll</a> --- <a href='https://shitmemes.github.io/memes/" + (id + 1) + "'>Next</a>";
-}
-
+}; } else { htmlContent += "Error! Meme not found!"; };
     // epileptic / offensive warning
     if (epileptic === true || offensive === true) {
         htmlContent += "<h3>";
@@ -80,10 +81,11 @@ if (id % 1 != 0) {
             htmlContent += "Offensive content ahead! <br>";
         } 
     htmlContent += "</h3>";
-    }
-htmlContent += "</center>" +
-    "</div>" +
-    "<div class='sections'>" +
+    };
+	  htmlContent += "</center></div>"
+if (memeFound === 1) {
+// section left
+htmlContent += "<div class='sections'>" +
     "<div class='sectionLeft'>" +
     "<center>" +
     "<div class='ohio'>";
@@ -95,9 +97,7 @@ htmlContent += "</center>" +
     } else {
         htmlContent += '<img width="640" height="640" src="' + directory + '" alt=' + title + '>';
     }
-    htmlContent += "</div></center>" +
-    "</div>" +
-
+    htmlContent += "</div></center></div>";
     // section right
     "<div class='sectionRight'>" +
 		note + "<br>" +
@@ -113,14 +113,13 @@ htmlContent += "</center>" +
 		}
     htmlContent += "</div>" +
     "</div>" +
-    "</div>" +
-    "<script src='https://purplsoosh.github.io/resources/memes/moreshit.js'></script>" +
+    "</div>"
+} else {htmlContent += "An error has occured.<br>We don't know what exactly, but previous patterns suggest it may be the JSON's fault." };
+    htmlContent += "<script src='https://purplsoosh.github.io/resources/memes/moreshit.js'></script>" +
     "</body>" +
     "</html>";
 	document.write(htmlContent);
-  
   })
   .catch(error => {
-    // Handle any errors that occurred during the fetch
     console.error('error.... fetched:', error);
   });
